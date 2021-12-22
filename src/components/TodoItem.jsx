@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTodo, toggleIsCompleted } from '../store/todosSlice';
+import { deleteTodo, toggleStatus } from '../store/todosSlice';
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
@@ -11,10 +11,10 @@ const TodoItem = ({ todo }) => {
     <li key={todo.id}>
       <input
         type="checkbox"
-        checked={todo.isCompleted}
-        onChange={() => dispatch(toggleIsCompleted({ id: todo.id }))}
+        checked={todo.completed}
+        onChange={() => dispatch(toggleStatus({ id: todo.id }))}
       />
-      {todo.text}
+      {todo.title}
       <span onClick={() => dispatch(deleteTodo({ id: todo.id }))}>x</span>
     </li>
   );
