@@ -1,20 +1,47 @@
-.App {
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fffafa;
+}
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.wrapper {
+.app-wrapper {
+  min-height: 80vh;
+}
+
+.content {
+  height: 60vh;
+  overflow: auto;
+}
+
+.todo-list {
   text-align: center;
+  min-height: 80%;
+  justify-content: center;
+  overflow: scroll;
+  .li-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    & li {
+      list-style: none;
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+.server-info {
+  height: 3rem;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  max-width: 300px;
-  & li {
-    list-style: none;
-  }
-  & span {
-      padding: 0 10px;
-      color: red;
-  }
 }
