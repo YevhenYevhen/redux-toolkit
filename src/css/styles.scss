@@ -1,0 +1,20 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 300px;
+  & li {
+    list-style: none;
+  }
+  & span {
+      padding: 0 10px;
+      color: red;
+  }
+}

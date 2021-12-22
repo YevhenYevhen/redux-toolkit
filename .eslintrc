@@ -1,0 +1,10 @@
+{
+    "extends": "wesbos",
+    "rules": {
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "prettier/prettier": "error"
+    }
+}
