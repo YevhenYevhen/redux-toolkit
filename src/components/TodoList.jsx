@@ -7,9 +7,8 @@ import TodoItem from './TodoItem';
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todos.todos);
-  console.log(todos);
   return (
-    <ul>
+    <ul style={{ margin: '0px 20px', padding: '0px' }}>
       {todos.map((todo) => (
         <TodoItem key={todo.id} todo={todo} />
       ))}
